@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SocialiteGoogleController;
 use App\Livewire\Categorias;
 use App\Livewire\Cursos;
 use Illuminate\Support\Facades\Route;
@@ -24,3 +25,6 @@ Route::middleware([
  */
 Route::get("/categorias",Categorias::class)->middleware("auth")->name("catgorias-page");
 Route::get("/cursos",Cursos::class)->middleware("auth")->name("curso-page");
+
+Route::get('/auth/redirect/login',[SocialiteGoogleController::class,"loginSocialite"])->name("login-socialite");
+Route::get('/callback/redirect',[SocialiteGoogleController::class,"redirectCallbackSocialite"])->name("redirect.socialite");

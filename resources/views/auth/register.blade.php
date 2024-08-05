@@ -55,6 +55,11 @@
                     {{ __('Register') }}
                 </x-button>
             </div>
+
+            <div class="flex items-center  mt-4">
+               <a href="{{route("login-socialite")}}" class="rounded-lg px-2 py-3 bg-red-600 hover:bg-red-500
+               text-white cursor-pointer w-full">Google</a>
+            </div>
         </form>
     </x-authentication-card>
 </x-guest-layout>

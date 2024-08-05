@@ -15,6 +15,12 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('catgorias-page') }}" :active="request()->routeIs('catgorias-page')">
+                        {{ __('Categorías') }}
+                    </x-nav-link>
+                    <x-nav-link href="{{ route('curso-page') }}" :active="request()->routeIs('curso-page')">
+                        {{ __('Cursos') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -141,6 +147,13 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('catgorias-page') }}" :active="request()->routeIs('catgorias-page')">
+                {{ __('Categorías') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link href="{{ route('curso-page') }}" :active="request()->routeIs('curso-page')">
+                {{ __('Cursos') }}
             </x-responsive-nav-link>
         </div>
 
